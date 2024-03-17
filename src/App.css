@@ -1,42 +1,38 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Decreased size of left panel */
+  gap: 20px;
+  padding: 20px;
+}
+
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control,
+.btn {
+  margin-bottom: 10px;
+  width: 50%;
+  font-size: 14px; /* Decreased font size */
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display three products in a row */
+  gap: 20px;
+  justify-content: space-between; /* Spread products evenly */
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  padding: 10px;
   text-align: center;
+  font-size: 12px; /* Decreased font size */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100px; /* Reduced image size */
 }
